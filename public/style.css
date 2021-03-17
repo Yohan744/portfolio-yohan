@@ -5,13 +5,6 @@ body {
     font-size: 15px;
 }
 
-#shots {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1080px;
-    margin: auto;
-}
-
 .shot {
     position: relative;
     display: block;
@@ -39,4 +32,26 @@ img {
     display: block;
     max-width: 100%;
     transition: opacity .2s ease-in-out;
+}
+
+#dribbbleShots {
+    display: grid;
+    padding: 0;
+    margin:0;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 900px) {
+    #dribbbleShots {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #dribbbleShots {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
 }
