@@ -26,7 +26,7 @@ $.ajax({
         if (data.length > 0) {
             $.each(data.reverse(), function(i, val) {
                 $('#dribbbleShots').prepend(
-                    '<a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.hidpi +'"/></a>'
+                    '<a class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.normal +'" alt="image"/></a>'
                 )
             })
         }
