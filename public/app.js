@@ -49,8 +49,9 @@ const requestProjects = async () => {
         console.log(response.data)
         const datas = response.data
         datas.forEach(data => {
-            if (data.tags === "one") {
+            if (data.id === 15312725) {
                 shot.innerHTML += `<img src="${data.images.normal}" alt="image">`
+                console.log("test")
             }
         })
     } catch (err) {
