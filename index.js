@@ -8,6 +8,19 @@ if(process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
+
+
+app.use(express.static('public'))
+
+http.listen(port, () => {
+    console.log(`http://localhost:${port}/`);
+});
+// -- ExpressJS -- //
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
+
 const requestApiDribbble = async (key,link) => {
     const response = await axios.get(`https://api.dribbble.com/v2/user/shots?access_token=${key}`)
     try {
@@ -19,15 +32,6 @@ const requestApiDribbble = async (key,link) => {
     }
 }
 
-requestApiDribbble(process.env["API_KEY_YOHAN "],"/getProjectYohan")
+requestApiDribbble(process.env.API_KEY_YOHAN,"/getProjectYohan")
 
-// -- ExpressJS -- //
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
-});
 
-app.use(express.static('public'))
-
-http.listen(port, () => {
-    console.log(`http://localhost:${port}/`);
-});
