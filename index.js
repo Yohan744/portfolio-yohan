@@ -3,6 +3,9 @@ const app = express();
 const http = require('http').Server(app);
 const port = process.env.PORT || 3000;
 const axios = require('axios')
+const cors = require('cors')
+
+app.use(cors())
 
 if(process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
@@ -11,7 +14,6 @@ if(process.env.NODE_ENV !== 'production') {
 
 
 app.use(express.static('public'))
-
 http.listen(port, () => {
     console.log(`http://localhost:${port}/`);
 });

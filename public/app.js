@@ -15,10 +15,10 @@
 
 
 // Set the Access Token
-const accessToken = "4983405655977b359076b5af88c10c35f118cdedd5849eb41aa0b87f856f9d8e"
+//const accessToken = "4983405655977b359076b5af88c10c35f118cdedd5849eb41aa0b87f856f9d8e"
 
 // Call Dribble v2 API
-$.ajax({
+/*$.ajax({
     url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
     dataType: 'json',
     type: 'GET',
@@ -34,4 +34,24 @@ $.ajax({
             $('#dribbbleShots').append('<p>No shots yet!</p>');
         }
     }
-});
+});*/
+
+const shot = document.querySelector("#dribbbleShots")
+
+const requestProjects = async () => {
+    const locationApi = "https://portfolio-b1.herokuapp.com/"
+    // const locationApi = "http://localhost:3000/"
+
+    const response = await axios.get(`${locationApi}getProjectYohan`)
+
+
+    try {
+        if (response.data.id === 15312725) {
+            shot.innerHTML += `<img src="${response.data.images.normal}" alt="image">`
+        }
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+requestProjects()
