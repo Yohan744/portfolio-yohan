@@ -19,6 +19,8 @@ const requestApiDribbble = async (key,link) => {
     }
 }
 
+requestApiDribbble(process.env["API_KEY_YOHAN "],"/getProjectYohan")
+
 // -- ExpressJS -- //
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
