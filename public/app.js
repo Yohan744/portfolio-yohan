@@ -49,7 +49,7 @@ const requestProjects = async () => {
         console.log(response.data)
         const datas = response.data
         datas.forEach(data => {
-            if (data.id === 15312725) {
+            if (data.description === "<p>one</p>\n\n<p>This is a test</p>") {
                 shot.innerHTML += `<img src="${data.images.normal}" alt="image">`
                 console.log("test")
             }

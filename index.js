@@ -11,8 +11,6 @@ if(process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
-
-
 app.use(express.static('public'))
 http.listen(port, () => {
     console.log(`http://localhost:${port}/`);
