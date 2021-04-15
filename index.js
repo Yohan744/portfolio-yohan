@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 
-const requestApiDribbble = async (key,link) => {
+const requestShots = async (key,link) => {
     const response = await axios.get(`https://api.dribbble.com/v2/user/shots?access_token=${key}`)
     try {
         app.get(link, (req,res) => {
@@ -32,6 +32,18 @@ const requestApiDribbble = async (key,link) => {
     }
 }
 
-requestApiDribbble(process.env.API_KEY_YOHAN,"/getProjectYohan")
+const requestUser = async (key,link) => {
+    const response = await axios.get(`https://api.dribbble.com/v2/user/?access_token=${key}`)
+    try {
+        app.get(link, (req,res) => {
+            res.send(response.data)
+        })
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+requestShots(process.env.API_KEY_YOHAN,"/getProjectYohan")
+requestUser(process.env.API_KEY_YOHAN,"/getUser")
 
 

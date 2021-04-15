@@ -1,19 +1,16 @@
-*{
+@charset "UTF-8";
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   cursor: none;
 }
 
-$firstColorWhite: rgb(255,255,255);
-$secondColorBlack: rgb(33,33,33);
-
 html, body {
-  background-color: $firstColorWhite;
+  background-color: white;
 }
 
 /*-----------------------------------------------Cursor---------------------------------------------*/
-
 #cursor {
   position: absolute;
   top: -5vh;
@@ -22,7 +19,7 @@ html, body {
   pointer-events: none;
   z-index: 999;
   border-radius: 100%;
-  background-color: $secondColorBlack;
+  background-color: #212121;
   transition: transform 0.3s ease;
   display: block;
 }
@@ -58,7 +55,7 @@ html, body {
   height: 1vw;
   width: 1vw;
   /*Couleur du curseur inversé !*/
-  background-color: $firstColorWhite;
+  background-color: white;
   mix-blend-mode: difference;
   border-radius: 50%;
   transition: transform 0.3s ease;
@@ -68,7 +65,6 @@ html, body {
 }
 
 /*---------------------------------------------menu Btn---------------------------------------------*/
-
 #menu-btn {
   position: absolute;
   top: 45.67vh;
@@ -76,12 +72,12 @@ html, body {
   height: 8vh;
   width: 8vh;
   border-radius: 100vh;
-  border: 0.5vh solid $secondColorBlack;
-  background-color: $firstColorWhite;
+  border: 0.5vh solid #212121;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 10;
 }
 
@@ -89,19 +85,19 @@ html, body {
   height: 0.6vh;
   width: 2vw;
   border-radius: 10vh;
-  background-color: $secondColorBlack;
-  transition: all .5s ease-in-out;
+  background-color: #212121;
+  transition: all 0.5s ease-in-out;
 }
 
 #menu-btn-burger::before,
 #menu-btn-burger::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 0.6vh;
   width: 2vw;
-  background-color: $secondColorBlack;
+  background-color: #212121;
   border-radius: 10vh;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #menu-btn-burger::before {
@@ -132,7 +128,7 @@ html, body {
   height: 8vh;
   width: 8vh;
   border-radius: 100vh;
-  background-color: $secondColorBlack;
+  background-color: #212121;
   transition: all 0.5s ease-in-out;
   z-index: 1;
 }
@@ -143,9 +139,7 @@ html, body {
   z-index: 2;
 }
 
-
 /*-----------------------------------------------menu-------------------------------------------------*/
-
 #menu {
   position: absolute;
   top: 0;
@@ -171,7 +165,7 @@ html, body {
   justify-content: space-evenly;
 }
 
-.navLink{
+.navLink {
   transition: all 0.3s ease;
   opacity: 0;
 }
@@ -180,7 +174,7 @@ html, body {
   display: inline-block;
   font-family: Poppins, serif;
   font-size: 8vh;
-  color: $firstColorWhite;
+  color: white;
   pointer-events: none;
   user-select: none;
   transition: transform 0.1s linear;
@@ -203,3 +197,5 @@ html, body {
     display: inline-block;
   }
 }*/
+
+/*# sourceMappingURL=main.css.map */

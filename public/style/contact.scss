@@ -13,185 +13,6 @@ body {
 $firstColorWhite: rgb(255,255,255);
 $secondColorBlack: rgb(33,33,33);
 
-/*-----------------------------------------------Cursor---------------------------------------------*/
-
-#cursor {
-    position: absolute;
-    top: -5vh;
-    height: 1vw;
-    width: 1vw;
-    pointer-events: none;
-    z-index: 999;
-    border-radius: 100%;
-    background-color: $secondColorBlack;
-    transition: transform 0.3s ease;
-    display: block;
-}
-
-#cursor:before {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 100%;
-    opacity: 0;
-}
-
-#cursor.active {
-    opacity: 1;
-    transform: scale(4);
-}
-
-#cursor.active:before {
-    opacity: 1;
-}
-
-#cursorMenu {
-    position: fixed;
-    top: 47vh;
-    left: 3vw;
-    height: 1vw;
-    width: 1vw;
-    /*Couleur du curseur inversé !*/
-    background-color: $firstColorWhite;
-    mix-blend-mode: difference;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    pointer-events: none;
-    z-index: 999;
-    display: none;
-}
-
-/*---------------------------------------------menu Btn---------------------------------------------*/
-
-#menu-btn {
-    position: absolute;
-    top: 45.67vh;
-    left: 2vw;
-    height: 8vh;
-    width: 8vh;
-    border-radius: 100vh;
-    border: 0.5vh solid $secondColorBlack;
-    background-color: $firstColorWhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .5s ease-in-out;
-    z-index: 10;
-}
-
-#menu-btn-burger {
-    height: 0.6vh;
-    width: 2vw;
-    border-radius: 10vh;
-    background-color: $secondColorBlack;
-    transition: all .5s ease-in-out;
-}
-
-#menu-btn-burger::before,
-#menu-btn-burger::after {
-    content: '';
-    position: absolute;
-    height: 0.6vh;
-    width: 2vw;
-    background-color: $secondColorBlack;
-    border-radius: 10vh;
-    transition: all .5s ease-in-out;
-}
-
-#menu-btn-burger::before {
-    transform: translateY(-1.5vh);
-}
-
-#menu-btn-burger::after {
-    transform: translateY(1.5vh);
-}
-
-#menu-btn.open #menu-btn-burger {
-    transform: translateX(-5vw);
-    background: transparent;
-}
-
-#menu-btn.open #menu-btn-burger::before {
-    transform: rotate(45deg) translate(3.5vw, -3.5vw);
-}
-
-#menu-btn.open #menu-btn-burger::after {
-    transform: rotate(-45deg) translate(3.5vw, 3.5vw);
-}
-
-#menu-btn-active {
-    position: absolute;
-    top: 45.67vh;
-    left: 2vw;
-    height: 8vh;
-    width: 8vh;
-    border-radius: 100vh;
-    background-color: $secondColorBlack;
-    transition: all 0.5s ease-in-out;
-    z-index: 1;
-}
-
-#menu-btn-active.active {
-    transform: scale(55);
-    transition: all 0.5s ease-in-out;
-    z-index: 2;
-    overflow: hidden;
-}
-
-
-/*-----------------------------------------------menu-------------------------------------------------*/
-
-#menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    z-index: 2;
-}
-
-#menu.activeList {
-    display: block;
-}
-
-#navMenu {
-    position: absolute;
-    left: 7vw;
-    width: 86%;
-    margin: 0 auto;
-    text-align: center;
-    top: 43.5%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.navLink{
-    transition: all 0.3s ease;
-    opacity: 0;
-}
-
-.navSpan {
-    display: inline-block;
-    font-family: Poppins, serif;
-    font-size: 8vh;
-    color: $firstColorWhite;
-    pointer-events: none;
-    user-select: none;
-    transition: transform 0.1s linear;
-}
-
-.navLink:hover ~ #cursorMenu {
-    transform: translate(-50%, -50%) scale(8);
-}
-
 /*-----------------------------------------------Contact-------------------------------------------------*/
 
 #contact-wrapper {
@@ -202,111 +23,169 @@ $secondColorBlack: rgb(33,33,33);
     width: 80vw;
 }
 
+#contact-title-wrapper {
+    position: absolute;
+    top: 5vh;
+    left: 1.5vw;
+}
+
+#contact-title {
+    position: relative;
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: Allerta stencil, serif;
+}
+
 #contact-wrapper-part-one {
     position: absolute;
-    top: 15%;
-    left: 10%;
-    height: 70%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    top: 32.5%;
+    left: 1.5%;
+    height: 35%;
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-.contact-text-left {
-    font-family: Poppins, serif;
-    font-size: 1.5vw;
-    text-align: left;
-    font-weight: 300;
-}
-
-#contact-socialMedia-wrapper {
+.contact-info {
     position: relative;
-    height: 5vh;
+    height: 10vh;
+    width: 15vw;
+}
+
+.contact-title-label {
+    font-size: 1.8vw;
+    font-weight: bold;
+    font-family: Poppins, serif;
+    color: $secondColorBlack;
+}
+
+.contact-text {
+    position: relative;
+    top: 0.5vh;
+    font-size: 1vw;
+    font-family: Poppins, serif;
+    color: $secondColorBlack;
+}
+
+#contact-socialMedia-image {
+    top: 0.5vh;
+    position: relative;
+    height: 4vh;
     width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .contact-image {
     position: relative;
     height: 100%;
-    background-size: cover;
+    object-fit: cover;
 }
 
 #contact-wrapper-part-two {
     position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 50%;
+    top: 10%;
+    right: 1.5%;
+    height: 80%;
+    width: 47%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#contact-label-name-wrapper {
+    position: relative;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#contact-title-label-name {
+    position: relative;
+    left: 12.5vw;
+}
+
+#contact-wrapper-input-name {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
-.contact-input {
+.contact-input-name {
     position: relative;
-    height: 7vh;
-    width: 25vw;
+    height: 5vh;
+    width: 18vw;
     border: none;
-    border-bottom: 0.5vh solid $secondColorBlack;
+    border-bottom: 0.4vh solid $secondColorBlack;
     outline: none;
-    left: 5vw;
-    text-indent: 1vw;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-family: Poppins, serif;
 
     &::placeholder {
-        text-indent: 1vw;
-        font-size: 1.5vw;
+        font-size: 1vw;
         font-family: Poppins, serif;
     }
 
     &:focus {
-        text-indent: 1vw;
-        font-size: 1.5vw;
+        font-size: 1vw;
         color: #212121;
         font-family: Poppins, serif;
     }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active  {
-    transition: background-color 5000s;
-    -webkit-text-fill-color: $secondColorBlack !important;
-    font-family: Poppins, serif;
-    font-size: 1.5vw;
-    text-indent: 1vw;
-    background-color: $firstColorWhite;
+#contact-label-email-wrapper {
+    position: relative;
 }
 
-.contact-input-text {
+#contact-input-email {
     position: relative;
-    height: 25vh;
-    width: 25vw;
+    height: 5vh;
+    width: 100%;
     border: none;
-    border-bottom: 0.5vh solid $secondColorBlack;
+    border-bottom: 0.4vh solid $secondColorBlack;
     outline: none;
-    left: 5vw;
-    word-break: break-word;
-    white-space: normal;
-    resize: none;
-    padding: 1vw;
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-family: Poppins, serif;
 
     &::placeholder {
-        font-size: 1.5vw;
+        font-size: 1vw;
         font-family: Poppins, serif;
     }
 
     &:focus {
-        padding: 1vw;
-        font-size: 1.5vw;
+        font-size: 1vw;
+        color: #212121;
+        font-family: Poppins, serif;
+    }
+}
+
+#contact-input-text {
+    position: relative;
+    height: 15vh;
+    width: 100%;
+    border: none;
+    border-bottom: 0.4vh solid $secondColorBlack;
+    outline: none;
+    word-break: break-word;
+    white-space: normal;
+    resize: none;
+    padding-top: 1.5vh;
+    font-size: 1vw;
+    font-family: Poppins, serif;
+
+    &::placeholder {
+        font-size: 1vw;
+        font-family: Poppins, serif;
+    }
+
+    &:focus {
+        font-size: 1vw;
         color: #212121;
         font-family: Poppins, serif;
     }
@@ -318,65 +197,51 @@ input:-webkit-autofill:active  {
 
 .contact-input-send {
     position: relative;
-    height: 10vh;
+    height: 6.5vh;
+    left: 20vw;
     width: 25vw;
     background: none;
-    border: 0.5vh solid $secondColorBlack;
+    border: none;
     outline: none;
-    left: 5vw;
     font-size: 1.5vw;
     font-family: Poppins, serif;
     color: $secondColorBlack;
     transition: 0.6s;
     overflow: hidden;
+    padding-right: 9.4vw;
 
     &:focus {
         outline: none;
     }
 
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        background: $secondColorBlack;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 60px;
-        opacity: 0.5;
-        filter: blur(25px);
-        transform: translateX(-130px) skewX(-15deg);
-    }
-
     &:after {
         content: "";
-        display: block;
         position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.4vh;
         background: $secondColorBlack;
-        top: 0;
-        left: 30px;
-        height: 100%;
-        width: 30px;
-        opacity: 0;
-        filter: blur(25px);
-        transform: translate(-100px) scaleX(-15deg);
-    }
-
-    &:hover {
-        background: $secondColorBlack;
-        color: $firstColorWhite;
-    }
-
-    &:hover:before {
-        transform: translateX(500px) skewX(-15deg);
-        opacity: 0.6;
-        transition: 0.7S;
+        transform: scale(0, 1);
+        transform-origin: 0 100%;
+        transition: all .5s ease-in-out;
     }
 
     &:hover:after {
-        transform: translateX(500px) skewX(-15deg);
-        opacity: 1;
-        transition: 0.7S;
+        transform: scale(1, 1);
     }
-
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: $secondColorBlack !important;
+    font-family: Poppins, serif;
+    font-size: 1vw;
+    background-color: $firstColorWhite;
+}
+
+//<label for="givenName" class="contact-title-label">Prénom</label>
+//<label for="familyName" class="contact-title-label">Nom</label>

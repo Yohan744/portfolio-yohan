@@ -1,3 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+$firstColorWhite: rgb(255,255,255);
+$secondColorBlack: rgb(33,33,33);
+
 /*---------------------------------------------Project-------------------------------------------*/
 
 #first-project-wrapper {
@@ -179,6 +194,7 @@
   left: 0;
   height: 5vh;
   display: flex;
+  align-items: center;
 }
 
 .info-contact-text {
@@ -186,7 +202,6 @@
   font-family: Poppins, serif;
   font-size: 1.3vw;
   margin-left: 2vw;
-  vertical-align: middle;
 }
 
 /*--------------------------------------------Full Page------------------------------------------*/

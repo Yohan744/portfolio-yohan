@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 /*---------------------------------------------Project-------------------------------------------*/
 #first-project-wrapper {
   position: absolute;
@@ -172,6 +184,7 @@
   left: 0;
   height: 5vh;
   display: flex;
+  align-items: center;
 }
 
 .info-contact-text {
@@ -179,7 +192,6 @@
   font-family: Poppins, serif;
   font-size: 1.3vw;
   margin-left: 2vw;
-  vertical-align: middle;
 }
 
 /*--------------------------------------------Full Page------------------------------------------*/
@@ -259,4 +271,4 @@
   border-radius: 0;
 }*/
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=home.css.map */
