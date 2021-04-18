@@ -71,12 +71,11 @@ html, body {
 
 #menu-btn {
   position: absolute;
-  top: 45.67vh;
+  top: 45.75vh;
   left: 2vw;
-  height: 8vh;
-  width: 8vh;
+  height: 8.5vh;
+  width: 8.5vh;
   border-radius: 100vh;
-  border: 0.5vh solid $secondColorBlack;
   background-color: $firstColorWhite;
   display: flex;
   justify-content: center;
@@ -127,8 +126,8 @@ html, body {
 
 #menu-btn-active {
   position: absolute;
-  top: 45.67vh;
-  left: 2vw;
+  top: 45.85vh;
+  left: 2.1vw;
   height: 8vh;
   width: 8vh;
   border-radius: 100vh;

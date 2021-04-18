@@ -108,21 +108,21 @@ const requestProjects = async () => {
         console.log(response.data)
         const datas = response.data
         datas.forEach(data => {
-            let verifFirstProject = data.description.indexOf("ProjectOne")
+            let verifFirstProject = data.description.indexOf("Project1")
             if (verifFirstProject !== -1) {
                 firstProjectTitleWrapper.innerHTML = `<h1 class="project-title">${data.title}</h1>`
                 firstProjectSubtitleWrapper.innerHTML = `<h1 class="project-subtitle">${data.tags}</h1>`
                 firstProjectImageWrapper.innerHTML += `<img src="${data.images.normal}" alt="image" class="project-image">`
             }
 
-            let verifSecondProject = data.description.indexOf("ProjectTwo")
+            let verifSecondProject = data.description.indexOf("Project2")
             if (verifSecondProject !== -1) {
                 secondProjectTitleWrapper.innerHTML = `<h1 class="project-title">${data.title}</h1>`
                 secondProjectSubtitleWrapper.innerHTML = `<h1 class="project-subtitle">${data.tags}</h1>`
                 secondProjectImageWrapper.innerHTML += `<img src="${data.images.normal}" alt="image" class="project-image">`
             }
 
-            let verifThirdProject = data.description.indexOf("ProjectThree")
+            let verifThirdProject = data.description.indexOf("Project3")
             if (verifThirdProject !== -1) {
                 thirdProjectTitleWrapper.innerHTML = `<h1 class="project-title">${data.title}</h1>`
                 thirdProjectSubtitleWrapper.innerHTML = `<h1 class="project-subtitle">${data.tags}</h1>`
