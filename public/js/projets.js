@@ -78,12 +78,9 @@ new fullpage("#fullpage", {
 
 const changeSection = function () {
 
-    //const sectionActivePreviously = document.getElementsByClassName("section")
-
     for (let i = 0; i < projectNumber; i++) {
-        let sectionTarget = document.getElementById(`section${i}`)
-        let navigationTarget = document.getElementById(`navigation${i}`)
-        let sectionTargetPrev = document.getElementById(`section${i-1}`)
+        const sectionTarget = document.getElementById(`section${i}`)
+        const navigationTarget = document.getElementById(`navigation${i}`)
 
 
         // Change section on scroll
@@ -97,8 +94,8 @@ const changeSection = function () {
         navigationTarget.onclick = function (e){
             fullpage_api.moveTo(e.target.className[17])
         }
-
     }
 }
+
 setInterval(changeSection, 500)
 

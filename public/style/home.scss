@@ -13,6 +13,131 @@ body {
 $firstColorWhite: rgb(255,255,255);
 $secondColorBlack: rgb(33,33,33);
 
+/*---------------------------------------------Navigation-------------------------------------------*/
+
+#navigation-wrapper {
+  position: absolute;
+  top: 20vh;
+  right: 0;
+  height: 60vh;
+  width: 5vw;
+  display: flex;
+  vertical-align: middle;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.navigation {
+  position: relative;
+  height: 2.5vh;
+  width: 2.5vh;
+  left: calc(50% - 1.25vh);
+  border-radius: 100%;
+  background-color: $secondColorBlack;
+
+  &.active {
+    position: relative;
+    margin-top: 6vh;
+    left: calc(50% - 1.25vh);
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 10vh;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    user-select: none;
+    animation-name: animationActiveNavigation;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    &:after {
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      top: -5vh;
+      content: attr(data-before);
+      font-family: Poppins, serif;
+      font-weight: bold;
+      font-size: 2.25vw;
+      transform: rotate(270deg);
+      color: $secondColorBlack;
+      animation-name: animationActiveNavigationAfter;
+      animation-duration: 0.75s;
+      animation-delay: 0.75s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes animationActiveNavigation {
+  0%{
+    left: calc(50% - 1.25vh);
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+  10%{
+    left: calc(50% - 0.625vw);
+    height: 1.25vw;
+    width: 1.25vw;
+  }
+  15%{
+    left: calc(50% - 0.5625vw);
+    height: 1.125vw;
+    width: 1.125vw;
+  }
+  20%{
+    left: calc(50% - 0.5vw);
+    height: 1vw;
+    width: 1vw;
+  }
+  25%{
+    left: calc(50% - 0.4375vw);
+    height: 0.875vw;
+    width: 0.875vw;
+  }
+  30%{
+    left: calc(50% - 0.375vw);
+    height: 0.75vw;
+    width: 0.75vw;
+  }
+  35%{
+    left: calc(50% - 0.3125vw);
+    height: 0.625vw;
+    width: 0.625vw;
+  }
+  40%{
+    left: calc(50% - 0.25vw);
+    height: 0.5vw;
+    width: 0.5vw;
+  }
+  45%{
+    left: calc(50% - 0.1875vw);
+    height: 0.375vw;
+    width: 0.375vw;
+  }
+  50%{
+    left: calc(50% - 0.125vw);
+    height: 0.25vw;
+    width: 0.25vw;
+  }
+  100%{
+    left: calc(50% - 0.125vw);
+    height: 20vh;
+    width: 0.25vw;
+  }
+}
+
+@keyframes animationActiveNavigationAfter {
+  0%{
+
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 /*---------------------------------------------Project-------------------------------------------*/
 
 #first-project-wrapper {

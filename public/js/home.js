@@ -1,3 +1,59 @@
+/*-------------------------------------------Full Page------------------------------------------*/
+
+new fullpage("#fullpage", {
+    fixedElements: '#logo',
+    autoScrolling: true,
+    scrollingSpeed: 700,
+    onLeave: (origin, destination, direction) => {
+        //const section = destination.item
+        //console.log(destination.item)
+        //const text = section.querySelector('.presentationS1')
+        //const image = section.querySelector('.imgPresentationS1')
+        //const tl = new TimelineMax({delay: 0.75})
+        //tl.fromTo(text, 0.75, {y: '50', opacity: 0}, {y: 0, opacity: 1})
+        //tl.fromTo(image, 0.75, {y: '-50', opacity: 0}, {y: 0, opacity: 1})
+    }
+})
+
+/*-------------------------------------------Navigation---------------------------------------------*/
+
+const navigationWrapper = document.querySelector("#navigation-wrapper")
+
+navigationNumber = 5
+
+for (let i = 0; i < navigationNumber; i++) {
+
+    const navigation = document.createElement("div")
+    navigation.classList.add("navigation")
+    navigation.setAttribute("id", `navigation${i}`)
+    navigation.classList.add(`${i + 1}`)
+    navigationWrapper.append(navigation)
+
+}
+
+const changeSection = function () {
+
+    for (let i = 0; i < navigationNumber; i++) {
+        let sectionTarget = document.getElementById(`section${i}`)
+        let navigationTarget = document.getElementById(`navigation${i}`)
+
+        // Change active navigation on scroll
+        if (sectionTarget.classList.contains("active")) {
+            navigationTarget.classList.add("active")
+            navigationTarget.setAttribute("data-before", `0${i + 1}`)
+        } else {
+            navigationTarget.classList.remove("active")
+        }
+
+        // Change section on click
+        navigationWrapper.addEventListener('click', e => {
+            fullpage_api.moveTo(e.target.className[11])
+        })
+    }
+}
+
+setInterval(changeSection, 500)
+
 /*-------------------------------------------Project---------------------------------------------*/
 
 const firstProjectImageWrapper = document.querySelector("#first-project-image-wrapper")
@@ -68,24 +124,6 @@ let parallaxProjects = new Parallax(projects, {
     pointerEvents: true,
 })
 
-/*-------------------------------------------Full Page------------------------------------------*/
-
-new fullpage("#fullpage", {
-    fixedElements: '#logo',
-    autoScrolling: true,
-    scrollingSpeed: 700,
-    navigation: true,
-    onLeave: (origin, destination, direction) => {
-        const section = destination.item
-        console.log(destination.item)
-        //const text = section.querySelector('.presentationS1')
-        //const image = section.querySelector('.imgPresentationS1')
-        //const tl = new TimelineMax({delay: 0.75})
-        //tl.fromTo(text, 0.75, {y: '50', opacity: 0}, {y: 0, opacity: 1})
-        //tl.fromTo(image, 0.75, {y: '-50', opacity: 0}, {y: 0, opacity: 1})
-    }
-})
-
 /*---------------------------------------Insert Projects------------------------------------------*/
 
 
@@ -105,25 +143,24 @@ const requestProjects = async () => {
     const response = await axios.get(`${locationApi}getProjectYohan`)
 
     try {
-        console.log(response.data)
         const datas = response.data
         datas.forEach(data => {
-            let verifFirstProject = data.description.indexOf("Project1")
-            if (verifFirstProject !== -1) {
+            let verifFirstProject = data.description.indexOf("Project0")
+            if ((verifFirstProject !== -1) && (verifFirstProject < 30)) {
                 firstProjectTitleWrapper.innerHTML = `<h1 class="project-title">${data.title}</h1>`
                 firstProjectSubtitleWrapper.innerHTML = `<h1 class="project-subtitle">${data.tags}</h1>`
                 firstProjectImageWrapper.innerHTML += `<img src="${data.images.normal}" alt="image" class="project-image">`
             }
 
-            let verifSecondProject = data.description.indexOf("Project2")
-            if (verifSecondProject !== -1) {
+            let verifSecondProject = data.description.indexOf("Project1")
+            if ((verifSecondProject !== -1) && (verifSecondProject < 30)) {
                 secondProjectTitleWrapper.innerHTML = `<h1 class="project-title">${data.title}</h1>`
                 secondProjectSubtitleWrapper.innerHTML = `<h1 class="project-subtitle">${data.tags}</h1>`
                 secondProjectImageWrapper.innerHTML += `<img src="${data.images.normal}" alt="image" class="project-image">`
             }
 
-            let verifThirdProject = data.description.indexOf("Project3")
-            if (verifThirdProject !== -1) {
+            let verifThirdProject = data.description.indexOf("Project2")
+            if ((verifThirdProject !== -1) && (verifThirdProject < 30)) {
                 thirdProjectTitleWrapper.innerHTML = `<h1 class="project-title">${data.title}</h1>`
                 thirdProjectSubtitleWrapper.innerHTML = `<h1 class="project-subtitle">${data.tags}</h1>`
                 thirdProjectImageWrapper.innerHTML += `<img src="${data.images.normal}" alt="image" class="project-image">`

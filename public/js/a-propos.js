@@ -4,8 +4,8 @@ const aProposImageWrapper = document.querySelector("#a-propos-right-wrapper")
 const aProposParagraph = document.querySelector("#a-propos-paragraph-wrapper")
 
 const requestUser = async () => {
-    //const locationApi = "https://portfolio-b1.herokuapp.com/"
-    const locationApi = "http://localhost:3000/"
+    const locationApi = "https://portfolio-b1.herokuapp.com/"
+    //const locationApi = "http://localhost:3000/"
 
     const response = await axios.get(`${locationApi}getUser`)
 
