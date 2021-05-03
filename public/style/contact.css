@@ -21,15 +21,17 @@ body {
 
 #contact-title-wrapper {
   position: absolute;
-  top: 5vh;
+  top: 3vh;
   left: 1.5vw;
 }
 
 #contact-title {
   position: relative;
+  font-family: "Allerta stencil", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 5vw;
-  font-weight: bold;
-  font-family: Allerta stencil, serif;
+  color: #212121;
 }
 
 #contact-wrapper-part-one {
@@ -49,30 +51,29 @@ body {
   width: 15vw;
 }
 
-.mailTo {
-  text-decoration: none;
-}
-
 .contact-title-label {
-  font-size: 1.8vw;
-  font-weight: bold;
   font-family: Poppins, serif;
   color: #212121;
+  font-size: 1.8vw;
+  font-style: normal;
+  font-weight: bold;
 }
 
 .contact-text {
   position: relative;
-  top: 0.5vh;
-  font-size: 1vw;
+  top: 1.2vh;
+  font-size: 1.2vw;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
   color: #212121;
 }
 
 #contact-socialMedia-image {
-  top: 0.5vh;
+  top: 1.2vh;
   position: relative;
-  height: 4vh;
-  width: 70%;
+  height: 3.5vh;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -122,19 +123,25 @@ body {
   height: 5vh;
   width: 18vw;
   border: none;
-  border-bottom: 0.4vh solid #212121;
+  border-bottom: 0.6vh solid #212121;
   outline: none;
   font-size: 1vw;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
 }
 .contact-input-name::placeholder {
   font-size: 1vw;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
 }
 .contact-input-name:focus {
   font-size: 1vw;
-  color: #212121;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #212121;
 }
 
 #contact-label-email-wrapper {
@@ -146,19 +153,25 @@ body {
   height: 5vh;
   width: 100%;
   border: none;
-  border-bottom: 0.4vh solid #212121;
+  border-bottom: 0.6vh solid #212121;
   outline: none;
   font-size: 1vw;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
 }
 #contact-input-email::placeholder {
   font-size: 1vw;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
 }
 #contact-input-email:focus {
   font-size: 1vw;
-  color: #212121;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #212121;
 }
 
 #contact-input-text {
@@ -166,7 +179,7 @@ body {
   height: 15vh;
   width: 100%;
   border: none;
-  border-bottom: 0.4vh solid #212121;
+  border-bottom: 0.6vh solid #212121;
   outline: none;
   word-break: break-word;
   white-space: normal;
@@ -174,15 +187,21 @@ body {
   padding-top: 1.5vh;
   font-size: 1vw;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
 }
 #contact-input-text::placeholder {
   font-size: 1vw;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
 }
 #contact-input-text:focus {
   font-size: 1vw;
-  color: #212121;
   font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #212121;
 }
 #contact-input-text::-webkit-scrollbar {
   color: transparent;
@@ -190,36 +209,24 @@ body {
 
 .contact-input-send {
   position: relative;
-  height: 6.5vh;
+  height: 5vh;
   left: 20vw;
-  width: 25vw;
-  background: none;
+  width: 17vw;
   border: none;
+  border-radius: 10vw;
   outline: none;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   font-family: Poppins, serif;
-  color: #212121;
-  transition: 0.6s;
+  color: white;
+  transition: 0.5s;
+  background-color: #212121;
   overflow: hidden;
-  padding-right: 9.4vw;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 .contact-input-send:focus {
   outline: none;
-}
-.contact-input-send:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.4vh;
-  background: #212121;
-  transform: scale(0, 1);
-  transform-origin: 0 100%;
-  transition: all 0.5s ease-in-out;
-}
-.contact-input-send:hover:after {
-  transform: scale(1, 1);
 }
 
 input:-webkit-autofill,
@@ -231,6 +238,26 @@ input:-webkit-autofill:active {
   font-family: Poppins, serif;
   font-size: 1vw;
   background-color: white;
+}
+
+#decoration-image-wrapper {
+  position: absolute;
+  bottom: -5vh;
+  left: 35vw;
+  height: 30vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.decoration-image {
+  position: relative;
+  height: 100%;
+  width: 33.33%;
+}
+
+#reverse-image {
+  transform: scaleX(-1);
 }
 
 /*# sourceMappingURL=contact.css.map */
