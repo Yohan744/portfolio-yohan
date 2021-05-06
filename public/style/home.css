@@ -49,10 +49,10 @@ body {
 .navigation.active:after {
   position: absolute;
   width: 100%;
-  left: 50%;
+  left: -0.1;
   top: -5vh;
   content: attr(data-before);
-  font-family: Poppins, serif;
+  font-family: "Allerta stencil", serif;
   font-weight: bold;
   font-size: 2.25vw;
   transform: rotate(270deg);
@@ -127,6 +127,102 @@ body {
     opacity: 1;
   }
 }
+/*---------------------------------------------Welcome-------------------------------------------*/
+#logo-wrapper {
+  position: absolute;
+  top: 2vh;
+  left: 2.5vw;
+  height: 13vh;
+  width: 13vw;
+}
+
+#welcome-right-wrapper {
+  position: absolute;
+  top: 17.5vh;
+  right: 5vw;
+  height: 65vh;
+  width: 45vw;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+#welcome-left-wrapper {
+  position: absolute;
+  top: 25vh;
+  left: 10vw;
+  height: 50vh;
+  width: 40vw;
+}
+
+#welcome-left-title-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-left-title {
+  position: relative;
+  font-family: "Allerta stencil", sans-serif;
+  font-weight: 700;
+  font-size: 5vw;
+  color: #212121;
+  text-transform: capitalize;
+}
+
+#welcome-left-subtitle-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-left-subtitle {
+  font-family: Poppins, sans-serif;
+  color: #212121;
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: bold;
+}
+
+#welcome-left-paragraph-wrapper {
+  position: relative;
+  top: 5vh;
+  left: 0;
+  height: 15vh;
+  width: 100%;
+}
+
+.welcome-left-paragraph {
+  position: relative;
+  font-size: 1.7vw;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #212121;
+}
+.welcome-left-paragraph:first-line {
+  background-color: transparent;
+  user-select: none;
+  display: none;
+}
+
+#scroll-wrapper {
+  position: absolute;
+  bottom: 2vh;
+  right: 1.15vw;
+  height: 8vh;
+  width: 4vw;
+}
+
 /*---------------------------------------------Project-------------------------------------------*/
 #first-project-wrapper {
   position: absolute;
@@ -148,8 +244,8 @@ body {
 
 .project-title {
   position: relative;
-  font-family: Poppins, serif;
-  font-size: 3vw;
+  font-family: "Allerta stencil", serif;
+  font-size: 5vw;
   display: flex;
   align-items: center;
 }
@@ -166,12 +262,12 @@ body {
 
 .project-subtitle {
   font-family: Poppins, serif;
-  font-size: 3vh;
+  font-size: 3vw;
 }
 
 #first-project-image-wrapper {
   position: absolute;
-  margin-top: 10vh;
+  margin-top: 11vh;
   margin-left: 10vw;
   height: 60vh;
   width: 30vw;
@@ -213,7 +309,7 @@ body {
 
 #second-project-subtitle-wrapper {
   position: absolute;
-  margin-top: 10vh;
+  margin-top: 11vh;
   left: 0;
   height: 7vh;
   z-index: 1;
@@ -252,11 +348,12 @@ body {
   left: 0;
   height: 10vh;
   z-index: 1;
+  white-space: nowrap;
 }
 
 #third-project-subtitle-wrapper {
   position: absolute;
-  margin-top: 10vh;
+  margin-top: 11vh;
   left: 0;
   height: 7vh;
   z-index: 1;
@@ -282,110 +379,54 @@ body {
 /*---------------------------------------------Projects------------------------------------------*/
 #projects-wrapper {
   position: absolute;
-  top: 12.5vh;
-  left: 27.5vw;
+  top: 15vh;
+  left: 20vw;
   height: 70vh;
-  width: 50vw;
+  width: 60vw;
 }
 
-#projects-title-wrapper {
+#button-projects {
   position: absolute;
-  margin-top: 8vh;
-  margin-left: 30vw;
-  height: 10vh;
+  left: 45vw;
+  height: 5vh;
+  width: 10vw;
+  border: none;
+  outline: none;
+  border-radius: 10vh;
+  background-color: #212121;
+  font-family: Poppins, sans-serif;
+  font-size: 1.5vw;
+  color: white;
+  z-index: 1;
 }
 
 #info-contact {
   position: absolute;
   bottom: 0;
-  left: 0;
-  height: 5vh;
+  left: 5vw;
+  height: 10vh;
+  width: 90vw;
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .info-contact-text {
   position: relative;
-  font-family: Poppins, serif;
-  font-size: 1.3vw;
-  margin-left: 2vw;
+  font-family: Gill Sans mt Condensed, serif;
+  font-size: 1.75vw;
+  color: #212121;
 }
 
-/*--------------------------------------------Full Page------------------------------------------*/
-.text {
-  font-size: 2.8vh;
-  font-family: Poppins, serif;
-  color: white;
-}
-
-.presentationS1 {
-  position: absolute;
-  top: 27.5vh;
-  left: 10vw;
-  height: 45vh;
-  width: 30vw;
-  padding: 2vh;
-}
-
-.imgPresentationS1 {
-  position: absolute;
-  top: 20vh;
-  right: 12.5vw;
-  height: 60vh;
-  width: 40vw;
-  object-fit: cover;
-}
-
-/*#fp-nav ul li{
+a {
   position: relative;
-  height: 14px;
-  width: 14px;
-  display: flex;
-  justify-content: space-between;
+  height: 70%;
 }
 
-
-#fp-nav ul li a.active {
-  height: 100px;
-  width: 12px;
-  border-radius: 0;
-  background-color: #FFFFFF;
-}
-
-
-
-#fp-nav ul li a span {
-  border-radius: 50%;
-  z-index: 1;
-  height: 4px;
-  width: 4px;
-  border: 0;
-  display: flex;
-  flex-direction: row;
-  background: #333333;
-  left: 50%;
-  top: 50%;
-  margin: -2px 10px 0 -2px;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-
-#fp-nav ul li span {
+.contact-image {
   position: relative;
-  width: 14px;
-  height: 13px;
-  margin: 10px 0 10px 0;
-  justify-content: space-between;
+  height: 70%;
 }
-
-#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {
-  height: 50px;
-  width: 3px;
-  margin: -40px 0 0 -3px;
-  border-radius: 0;
-}*/
 
 /*# sourceMappingURL=home.css.map */

@@ -34,7 +34,7 @@ $secondColorBlack: rgb(33,33,33);
 }
 
 #a-propos-paragraph {
-  font-size: 1.1vw;
+  font-size: 10vw;
   font-family: Poppins, serif;
   text-align: justify;
 }
@@ -53,8 +53,8 @@ $secondColorBlack: rgb(33,33,33);
   font-weight: 400;
   font-family: Poppins, serif;
   align-items: center;
+  color: $secondColorBlack;
 }
-
 
 .download-image {
   position: relative;
@@ -62,6 +62,15 @@ $secondColorBlack: rgb(33,33,33);
   object-fit: cover;
   left: 1vw;
   top: 0.5vh;
+}
+
+#a-propos-a {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .a-propos-image {
@@ -78,4 +87,15 @@ $secondColorBlack: rgb(33,33,33);
   width: 40vw;
   display: flex;
   justify-content: center;
+}
+
+#software-wrapper-global {
+  position: absolute;
+  bottom: 5vh;
+  right: 20vw;
+  height: 6.5vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }

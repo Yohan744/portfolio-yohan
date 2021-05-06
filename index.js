@@ -15,6 +15,7 @@ app.use(express.static('public'))
 http.listen(port, () => {
     console.log(`http://localhost:${port}/`);
 });
+
 // -- ExpressJS -- //
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
@@ -43,7 +44,10 @@ const requestUser = async (key,link) => {
     }
 }
 
-requestShots(process.env.API_KEY_YOHAN,"/getProjectYohan")
+requestShots(process.env.API_KEY_YOHAN, "/getProjectYohan")
+
+
+
 requestUser(process.env.API_KEY_YOHAN,"/getUser")
 
 

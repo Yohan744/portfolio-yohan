@@ -136,7 +136,7 @@ html, body {
 }
 
 #menu-btn-active.active {
-  transform: scale(60);
+  transform: scale(65);
   transition: all 0.5s ease-in-out;
   z-index: 2;
 }
@@ -181,7 +181,7 @@ html, body {
   font-family: "Allerta stencil",sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 4vw;
+  font-size: 3.5vw;
   color: $firstColorWhite;
   pointer-events: none;
   user-select: none;
