@@ -15,6 +15,26 @@ new fullpage("#fullpage", {
     }
 })
 
+/*---------------------------------------Loading screen-----------------------------------------*/
+/*
+const loadingScreen = document.querySelector("#loadingScreen")
+let loadingVerif = false
+
+window.addEventListener("load", () => {
+    if (loadingVerif === false) {
+        loadingVerif = true
+        const cursor = document.querySelector("#cursor")
+        cursor.style.display = "none"
+        setTimeout(function() {
+            loadingScreen.style.top = "-100vh"
+            cursor.style.display = "block"
+            setTimeout(function() {
+                loadingScreen.parentElement.removeChild(loadingScreen)
+            }, 1000);
+        }, 10000);
+    }
+})*/
+
 /*-------------------------------------------Navigation---------------------------------------------*/
 
 const navigationWrapper = document.querySelector("#navigation-wrapper")
@@ -176,14 +196,12 @@ const requestProjects = async () => {
                     thirdProjectTitleWrapper.style.left = "-10vw"
                     thirdProjectSubtitleWrapper.style.left = "-10vw"
                 }
-
             }
 
             let verifWelcome = data.description.indexOf("Welcome")
             if ((verifWelcome !== -1) && (verifWelcome < 30)) {
                 welcomeImageWrapper.innerHTML = `<img src="${data.images.hidpi}" alt="welcome" class="image">`
-                welcomeTitleWrapper.innerHTML = `<h1 class="welcome-left-title">${data.tags}</h1>`
-                welcomeSubtitleWrapper.innerHTML = `<h1 class="welcome-left-subtitle">${data.title}</h1>`
+                welcomeTitleWrapper.innerHTML = `<h1 class="welcome-left-title">${data.title}</h1>`
                 welcomeParagraphWrapper.innerHTML = `<div class="welcome-left-paragraph">${data.description}</div>`
             }
 
@@ -196,7 +214,6 @@ const requestProjects = async () => {
         console.log(err)
     }
 }
-
 
 /*----------------------------------------------Functions----------------------------------------*/
 

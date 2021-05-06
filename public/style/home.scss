@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
 }
 
 body {
@@ -12,6 +11,26 @@ body {
 
 $firstColorWhite: rgb(255,255,255);
 $secondColorBlack: rgb(33,33,33);
+
+/*-----------------------------------------Loading screen----------------------------------------*/
+
+#loadingScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $firstColorWhite;
+  z-index: 999;
+  transition: all 2s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.loading-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 /*---------------------------------------------Navigation-------------------------------------------*/
 
@@ -183,9 +202,8 @@ $secondColorBlack: rgb(33,33,33);
   position: relative;
   font-family: "Allerta stencil",sans-serif;
   font-weight: 700;
-  font-size: 5vw;
+  font-size: 4vw;
   color: $secondColorBlack;
-  text-transform: capitalize;
 }
 
 #welcome-left-subtitle-wrapper {
@@ -207,26 +225,24 @@ $secondColorBlack: rgb(33,33,33);
 
 #welcome-left-paragraph-wrapper {
   position: relative;
-  top: 5vh;
+  top: 2vh;
   left: 0;
   height: 15vh;
   width: 100%;
-}
 
-.welcome-left-paragraph {
-  position: relative;
-  font-size: 1.7vw;
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: $secondColorBlack;
+  p{
+    position: relative;
+    font-size: 1.7vw;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: $secondColorBlack;
 
-  &:first-line {
-    background-color: transparent;
-    user-select: none;
-    display: none;
+    &:first-line {
+      color: transparent;
+      user-select: none;
+    }
   }
-
 }
 
 #scroll-wrapper {
@@ -260,7 +276,7 @@ $secondColorBlack: rgb(33,33,33);
 .project-title {
   position: relative;
   font-family: "Allerta stencil", serif;
-  font-size: 5vw;
+  font-size: 4vw;
   display: flex;
   align-items: center;
 }
@@ -320,7 +336,7 @@ $secondColorBlack: rgb(33,33,33);
 #second-project-title-wrapper {
   position: relative;
   top: 0;
-  left: 0;
+  margin-left: -5vw;
   height: 10vh;
   z-index: 1;
 }
@@ -328,7 +344,7 @@ $secondColorBlack: rgb(33,33,33);
 #second-project-subtitle-wrapper {
   position: absolute;
   margin-top: 11vh;
-  left: 0;
+  margin-left: -5vw;
   height: 7vh;
   z-index: 1;
 }
@@ -338,7 +354,7 @@ $secondColorBlack: rgb(33,33,33);
   margin-top: 10vh;
   margin-left: 10vw;
   height: 60vh;
-  width: 30vw;
+  width: 35vw;
   overflow: hidden;
   background-size: cover;
   transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
@@ -365,7 +381,7 @@ $secondColorBlack: rgb(33,33,33);
 #third-project-title-wrapper {
   position: relative;
   top: 0;
-  left: 0;
+  margin-left: -5vw;
   height: 10vh;
   z-index: 1;
   white-space: nowrap;
@@ -374,7 +390,7 @@ $secondColorBlack: rgb(33,33,33);
 #third-project-subtitle-wrapper {
   position: absolute;
   margin-top: 11vh;
-  left: 0;
+  margin-left: -5vw;
   height: 7vh;
   z-index: 1;
 }

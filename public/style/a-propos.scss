@@ -33,25 +33,52 @@ $secondColorBlack: rgb(33,33,33);
   font-family: Allerta stencil, serif;
 }
 
-#a-propos-paragraph {
+#a-propos-paragraph-wrapper {
+  p {
+    font-size: 1.1vw;
+    font-family: Poppins, serif;
+    text-align: left;
+
+    :first-line {
+      color: transparent;
+      user-select: none;
+    }
+
+  }
+}
+
+#text {
   font-size: 10vw;
   font-family: Poppins, serif;
-  text-align: justify;
+  text-align: left;
 }
 
 #a-propos-download-wrapper {
   position: relative;
   height: 5vh;
-  width: auto;
+  width: 30vw;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+#a-propos-download-wrapper-one {
+  position: relative;
+  height: 100%;
+  width: 60%;
+}
+
+#a-propos-download-wrapper-two {
+  position: relative;
+  height: 100%;
+  width: 25%;
 }
 
 #a-propos-download-title {
   display: flex;
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   font-weight: 400;
-  font-family: Poppins, serif;
+  font-family: Poppins, sans-serif;
   align-items: center;
   color: $secondColorBlack;
 }
@@ -61,7 +88,6 @@ $secondColorBlack: rgb(33,33,33);
   height: 80%;
   object-fit: cover;
   left: 1vw;
-  top: 0.5vh;
 }
 
 #a-propos-a {
@@ -77,6 +103,19 @@ $secondColorBlack: rgb(33,33,33);
   height: 100%;
   object-fit: cover;
   background-size: cover;
+}
+
+#about-button {
+  position: relative;
+  height: 5vh;
+  width: 8vw;
+  border: none;
+  outline: none;
+  border-radius: 10vh;
+  background-color: $secondColorBlack;
+  font-family: Poppins, sans-serif;
+  font-size: 1.5vw;
+  color: $firstColorWhite;
 }
 
 #a-propos-right-wrapper {

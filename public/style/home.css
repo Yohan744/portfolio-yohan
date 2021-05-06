@@ -2,12 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
 }
 
 body {
   height: 100vh;
   overflow: hidden;
+}
+
+/*-----------------------------------------Loading screen----------------------------------------*/
+#loadingScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 999;
+  transition: all 2s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.loading-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*---------------------------------------------Navigation-------------------------------------------*/
@@ -171,9 +189,8 @@ body {
   position: relative;
   font-family: "Allerta stencil", sans-serif;
   font-weight: 700;
-  font-size: 5vw;
+  font-size: 4vw;
   color: #212121;
-  text-transform: capitalize;
 }
 
 #welcome-left-subtitle-wrapper {
@@ -195,13 +212,12 @@ body {
 
 #welcome-left-paragraph-wrapper {
   position: relative;
-  top: 5vh;
+  top: 2vh;
   left: 0;
   height: 15vh;
   width: 100%;
 }
-
-.welcome-left-paragraph {
+#welcome-left-paragraph-wrapper p {
   position: relative;
   font-size: 1.7vw;
   font-family: Poppins, sans-serif;
@@ -209,10 +225,9 @@ body {
   font-weight: 400;
   color: #212121;
 }
-.welcome-left-paragraph:first-line {
-  background-color: transparent;
+#welcome-left-paragraph-wrapper p:first-line {
+  color: transparent;
   user-select: none;
-  display: none;
 }
 
 #scroll-wrapper {
@@ -245,7 +260,7 @@ body {
 .project-title {
   position: relative;
   font-family: "Allerta stencil", serif;
-  font-size: 5vw;
+  font-size: 4vw;
   display: flex;
   align-items: center;
 }
@@ -302,7 +317,7 @@ body {
 #second-project-title-wrapper {
   position: relative;
   top: 0;
-  left: 0;
+  margin-left: -5vw;
   height: 10vh;
   z-index: 1;
 }
@@ -310,7 +325,7 @@ body {
 #second-project-subtitle-wrapper {
   position: absolute;
   margin-top: 11vh;
-  left: 0;
+  margin-left: -5vw;
   height: 7vh;
   z-index: 1;
 }
@@ -320,7 +335,7 @@ body {
   margin-top: 10vh;
   margin-left: 10vw;
   height: 60vh;
-  width: 30vw;
+  width: 35vw;
   overflow: hidden;
   background-size: cover;
   transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
@@ -345,7 +360,7 @@ body {
 #third-project-title-wrapper {
   position: relative;
   top: 0;
-  left: 0;
+  margin-left: -5vw;
   height: 10vh;
   z-index: 1;
   white-space: nowrap;
@@ -354,7 +369,7 @@ body {
 #third-project-subtitle-wrapper {
   position: absolute;
   margin-top: 11vh;
-  left: 0;
+  margin-left: -5vw;
   height: 7vh;
   z-index: 1;
 }

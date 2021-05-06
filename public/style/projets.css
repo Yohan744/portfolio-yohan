@@ -52,10 +52,10 @@ body {
 
 .project-left-wrapper {
   position: absolute;
-  top: 17.5vh;
+  top: 25vh;
   left: 10vw;
-  height: 65vh;
-  width: 35vw;
+  height: 55vh;
+  width: 30vw;
 }
 
 .project-right-wrapper {
@@ -79,6 +79,7 @@ body {
   left: 0;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .project-title {
@@ -100,13 +101,14 @@ body {
 
 .project-subtitle {
   position: relative;
-  font-size: 2.5vw;
+  font-size: 2.25vw;
   font-family: Poppins, serif, serif;
+  font-weight: bold;
 }
 
 .project-paragraph-wrapper {
   position: relative;
-  top: 5vh;
+  top: 1vh;
   left: 0;
   height: 30vh;
   width: 100%;
@@ -115,7 +117,7 @@ body {
 .project-paragraph {
   font-size: 1.1vw;
   font-family: Poppins, serif;
-  text-align: justify;
+  text-align: left;
 }
 .project-paragraph:first-line {
   color: transparent;
