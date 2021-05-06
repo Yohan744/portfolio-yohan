@@ -14,14 +14,15 @@ html, body {
 #cursor {
   position: absolute;
   top: -5vh;
-  height: 1vw;
-  width: 1vw;
+  height: 1.5vw;
+  width: 1.5vw;
   pointer-events: none;
   z-index: 999;
   border-radius: 100%;
-  background-color: #212121;
+  border: 0.2vw solid #212121;
   transition: transform 0.3s ease;
   display: block;
+  transform: translate(-50%, -50%);
 }
 
 #cursor:before {
@@ -41,7 +42,7 @@ html, body {
 
 #cursor.active {
   opacity: 1;
-  transform: scale(4);
+  transform: scale(2);
 }
 
 #cursor.active:before {
@@ -52,11 +53,12 @@ html, body {
   position: fixed;
   top: 47vh;
   left: 3vw;
-  height: 1vw;
-  width: 1vw;
+  height: 1.5vw;
+  width: 1.5vw;
   /*Couleur du curseur inversé !*/
-  background-color: white;
+  background-color: transparent;
   mix-blend-mode: difference;
+  border: 0.2vw solid white;
   border-radius: 50%;
   transition: transform 0.3s ease;
   pointer-events: none;
@@ -183,7 +185,9 @@ html, body {
 }
 
 .navLink:hover ~ #cursorMenu {
-  transform: translate(-50%, -50%) scale(8);
+  transform: translate(-50%, -50%) scale(6);
+  background-color: white;
+  border: none;
 }
 
 /*@media(max-width: 900px) {

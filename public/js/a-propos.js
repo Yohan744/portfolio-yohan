@@ -14,7 +14,7 @@ const requestProjects = async () => {
 
         datas.forEach(data => {
 
-            let verifUserImage = data.description.indexOf("Profil")
+            let verifUserImage = data.title.indexOf("profil")
             if (verifUserImage !== -1) {
                 aProposImageWrapper.innerHTML = `<img src="${data.images.hidpi}" alt="image" class="a-propos-image">`
                 aProposParagraph.innerHTML = `${data.description}`

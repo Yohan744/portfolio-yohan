@@ -80,12 +80,10 @@ const firstProjectImageWrapper = document.querySelector("#first-project-image-wr
 
 firstProjectImageWrapper.addEventListener("mouseenter", () => {
     cursor.classList.add("active")
-    cursor.style.backgroundColor = "white"
 })
 
 firstProjectImageWrapper.addEventListener("mouseleave", () => {
     cursor.classList.remove("active")
-    cursor.style.backgroundColor = "#212121"
 })
 
 // Second Project
@@ -94,12 +92,10 @@ const secondProjectImageWrapper = document.querySelector("#second-project-image-
 
 secondProjectImageWrapper.addEventListener("mouseenter", () => {
     cursor.classList.add("active")
-    cursor.style.backgroundColor = "white"
 })
 
 secondProjectImageWrapper.addEventListener("mouseleave", () => {
     cursor.classList.remove("active")
-    cursor.style.backgroundColor = "#212121"
 })
 
 // Third Project
@@ -108,12 +104,10 @@ const thirdProjectImageWrapper = document.querySelector("#third-project-image-wr
 
 thirdProjectImageWrapper.addEventListener("mouseenter", () => {
     cursor.classList.add("active")
-    cursor.style.backgroundColor = "#FFFFFF"
 })
 
 thirdProjectImageWrapper.addEventListener("mouseleave", () => {
     cursor.classList.remove("active")
-    cursor.style.backgroundColor = "#212121"
 })
 
 /*-------------------------------------------Parallax-------------------------------------------*/
