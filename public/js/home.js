@@ -17,23 +17,36 @@ new fullpage("#fullpage", {
 
 /*---------------------------------------Loading screen-----------------------------------------*/
 
+const loadingImage = document.querySelector(".loading-image")
 const loadingScreen = document.querySelector("#loadingScreen")
-let loadingVerif = false
+let animPlay
 
-window.addEventListener("load", () => {
-    if (loadingVerif === false) {
-        loadingVerif = true
-        const cursor = document.querySelector("#cursor")
-        cursor.style.display = "none"
-        setTimeout(function() {
-            loadingScreen.style.top = "-100vh"
+if (sessionStorage.getItem("animPlay") === null){
+    animPlay = false;
+} else {
+    animPlay = sessionStorage.getItem('animPlay');
+}
+
+if (animPlay === false) {
+    cursor.style.display = "none"
+    loadingImage.play();
+    animPlay = true;
+    sessionStorage.setItem('animPlay', animPlay);
+
+
+    loadingImage.addEventListener("ended", () => {
+        loadingScreen.style.top = "-100vh"
+        loadingScreen.style.transition = "all 1s"
+        setTimeout(function () {
+            loadingScreen.parentElement.removeChild(loadingScreen)
             cursor.style.display = "block"
-            setTimeout(function() {
-                loadingScreen.parentElement.removeChild(loadingScreen)
-            }, 1000);
-        }, 10000);
-    }
-})
+        }, 1000);
+    })
+
+} else {
+    loadingScreen.style.display = "none";
+    loadingScreen.style.zIndex = "0";
+}
 
 /*-------------------------------------------Navigation---------------------------------------------*/
 
